@@ -1,1 +1,39 @@
-<p>contacts-list works!</p>
+<div class="list row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="row">
+      <div class="col-md-8">
+        <h4>
+          Lista de Contatos
+        </h4>
+      </div>
+
+      <div class="col-md-4">
+        <a routerLink="/contatos/add"  class="btn btn-success">Adicionar Contato</a>
+      </div>
+    </div>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+          <td>#</td>
+          <td>Nome</td>
+          <td>E-mail</td>
+          <td>Idade</td>
+          <td colspan="4">Opções</td>
+        </thead>
+        <tbody>
+        <tr *ngFor="let contact of contacts; let i = index">
+          <td>{{ contact.id }}</td>
+          <td>{{ contact.nome }}</td>
+          <td>{{ contact.email }}</td>
+          <td>{{ contact.idade }}</td>
+          <td colspan="4">
+            <button type="submit" class="btn btn-warning" (click)="detailContact(contact.id)">
+              Editar
+            </button>
+            <button type="submit" class="btn btn-danger" (click)="deleteContato(contact); reloadCurrentRoute();">Deletar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-1"></div>
+</div>
