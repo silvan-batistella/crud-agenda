@@ -8,7 +8,8 @@ import { ContactDetailsComponent } from './components/contact-details/contact-de
 import { ContactsListComponent } from './components/contacts-list/contacts-list.component';
 
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,11 +20,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http'
     ContactDetailsComponent
   ],
   imports: [
-    HttpClient,
     FormsModule,
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
