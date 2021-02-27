@@ -8,20 +8,21 @@ import { ContactDetailsComponent } from './components/contact-details/contact-de
 import { ContactsListComponent } from './components/contacts-list/contacts-list.component';
 
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClient, HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AddContactComponent,
-    ContactDetailsComponent,
-    ContactsListComponent
+    ContactsListComponent,
+    ContactDetailsComponent
   ],
   imports: [
+    HttpClient,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule
   ],
   providers: [],
