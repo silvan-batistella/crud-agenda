@@ -1,1 +1,56 @@
-<p>add-contact works!</p>
+<div class="list row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="list row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10"></div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <h4>
+          Adicionando novo contato
+        </h4>
+      </div>
+
+      <div class="col-md-4">
+        <a routerLink="/contatos/add"  class="btn btn-success">Adicionar Contato</a>
+      </div>
+    </div>
+    <div class="submit-form">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          required
+          [(ngModel)]="contact.nome"
+          name="nome"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input
+          class="form-control"
+          id="email"
+          required
+          [(ngModel)]="contact.email"
+          name="email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="idade">idade</label>
+        <input
+          class="form-control"
+          id="idade"
+          required
+          [(ngModel)]="contact.idade"
+          name="idade"
+        />
+      </div>
+      <button (click)="saveContact()" class="btn btn-success">Cadastrar</button>
+  </div>
+  </div>
+  <div class="col-md-1"></div>
+</div>
