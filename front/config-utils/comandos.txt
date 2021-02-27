@@ -1,0 +1,102 @@
+1 - 
+    !Adicionando o primeiro usuário
+
+    curl --request POST \
+    --url http://localhost:8080/contatos/ \
+    --header 'Content-Type: application/json' \
+    --data '{
+        "idade": "23",
+        "email": "maria@gmail.com",
+        "nome": "Maria"
+    }'
+
+2 - 
+    !Adicionando o segundo usuário
+    
+        curl --request POST \
+        --url http://localhost:8080/contatos/ \
+        --header 'Content-Type: application/json' \
+        --data '{
+            "idade": "22",
+            "email": "joao@gmail.com",
+            "nome": "João"
+        }'
+
+3 - 
+    !Adicionando o terceiro usuário
+
+        curl --request POST \
+        --url http://localhost:8080/contatos/ \
+        --header 'Content-Type: application/json' \
+        --data '{
+            "idade": "19",
+            "email": "pedro@gmail.com",
+            "nome": "Pedro"
+        }'
+
+4 - 
+    !Adicionando o quarto usuário
+
+        curl --request POST \
+        --url http://localhost:8080/contatos/ \
+        --header 'Content-Type: application/json' \
+        --data '{
+            "idade": "19",
+            "email": "paulo@gmail.com",
+            "nome": "Paulo"
+        }'
+
+5 - 
+    !Adicionando o quinto usuário
+
+        curl --request POST \
+        --url http://localhost:8080/contatos/ \
+        --header 'Content-Type: application/json' \
+        --data '{
+            "idade": "190",
+            "email": "mateus@gmail.com",
+            "nome": "Mateus"
+        }'
+
+6 -
+    !Buscando o terceiro por id
+
+        curl --request GET \
+        --url http://localhost:8080/contatos/3
+
+7 - 
+    !Listando todos os usuários cadastrados até o momento
+
+        curl --request GET \
+        --url http://localhost:8080/contatos/
+
+8 - 
+    !Buscando um usuário não cadastrados
+
+        curl --request GET \
+        --url http://localhost:8080/contatos/6
+
+9 - 
+    !Atualizando um usuário
+
+        curl --request PUT \
+        --url http://localhost:8080/contatos/5 \
+        --header 'Content-Type: application/json' \
+        --data '{
+            "idade": "19",
+            "email": "mateus@gmail.com",
+            "nome": "Mateus"
+        }'
+
+10 - 
+    !Listando usuário que acabou de ser editado
+
+        curl --request GET \
+        --url http://localhost:8080/contatos/5
+
+11 - 
+    !Excluindo um usuário
+
+        curl --request DELETE \
+        --url http://localhost:8080/contatos/4
+
